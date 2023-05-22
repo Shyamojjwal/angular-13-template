@@ -28,16 +28,22 @@ body {
 @import "./assets/css/left-side-bar";
 
 /*
-  ------------------ Main Container --------------
+  ------------------ Main Container SCSS --------------
 */
 
 @import "./assets/css/main";
 
 /*
-  ------------------ Header Css --------------
+  ------------------ Header SCSS --------------
 */
 
 @import "./assets/css/header";
+
+/*
+  ------------------ Auth SCSS --------------
+*/
+
+@import "./assets/css/auth";
 
 /*
   ------------------ Responsive SCSS --------------
