@@ -1,14 +1,16 @@
 .sidebar {
+  left: -100%;
+  opacity: 0;
   background: #222e3c;
   direction: ltr;
-  width: 250px;
-  transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
 
   .sidebar-content {
     display: flex;
     flex-direction: column;
+    width: 250px;
     height: 100vh;
-    transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
 
     .sidebar-brand {
       color: #f8f9fa;
@@ -46,14 +48,14 @@
         display: inline-block;
         padding: 2px;
         transform: rotate(45deg);
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
       }
 
       .dropdown-toggle.menu-open::after {
         transform: rotate(-135deg);
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
       }
 
       .dropdown-menu {
@@ -97,9 +99,10 @@
         text-transform: uppercase;
         padding: 1rem;
         height: initial;
-        transition: all 0.2s ease-in-out;
         white-space: nowrap;
         border-bottom: 1px solid #0c3477;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
       }
 
       .sidebar-item {
@@ -133,13 +136,14 @@
               right: 1.5rem;
               top: 1.2rem;
               transform: rotate(45deg);
-              transition: all .2s ease-out;
+              -webkit-transition: all 0.5s ease;
+              transition: all 0.5s ease;
             }
 
             &.expanded::after {
               transform: rotate(-135deg);
-              -webkit-transition: all 0.5s;
-              transition: all 0.5s;
+              -webkit-transition: all 0.5s ease;
+              transition: all 0.5s ease;
             }
           }
 
@@ -170,7 +174,8 @@
               left: -14px;
               position: relative;
               transform: translateX(0);
-              transition: all .1s ease;
+              -webkit-transition: all 0.5s ease;
+              transition: all 0.5s ease;
             }
 
             &:hover {

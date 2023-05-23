@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthLayoutComponent, FeaturedLayoutComponent } from "@app-layouts/layout-blueprints";
 import { HeaderComponent, FooterComponent, LeftMenuBarComponent, LeftSidebarComponent, SidebarUserboxComponent, HeaderUserboxComponent, HeaderNotificationComponent, HeaderMsgBoxComponent } from "@app-layouts/layout-components";
 import { SharedModule } from '@app-shared/shared.module';
+import { AngularResizedEventModule } from 'angular-resize-event';
 
 const DECLARATIONS_COMPONENTS: any = [
   AppComponent,
@@ -26,7 +27,8 @@ const DECLARATIONS_COMPONENTS: any = [
   imports: [
     BrowserModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularResizedEventModule
   ],
   providers: [],
   bootstrap: [AppComponent]

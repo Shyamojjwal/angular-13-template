@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toogleSidebar = () => {
-    var _el = document.querySelector(".wrapper.sidebar-expanded") as HTMLElement;
+    var _el = document.querySelector("#main-wrapper") as HTMLElement;
     
     this.isSideBarExpanded = !this.isSideBarExpanded;
 
@@ -24,9 +24,15 @@ export class HeaderComponent implements OnInit {
         if(_el.classList.contains('sidebar-collapse')) {
           _el.classList.remove('sidebar-collapse')
         }
+        if(!_el.classList.contains('sidebar-expanded')) {
+          _el.classList.add('sidebar-expanded')
+        }
       } else {
         if(!_el.classList.contains('sidebar-collapse')) {
           _el.classList.add('sidebar-collapse')
+        }
+        if(_el.classList.contains('sidebar-expanded')) {
+          _el.classList.remove('sidebar-expanded')
         }
       }
     }, 100);

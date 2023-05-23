@@ -1,15 +1,19 @@
 .color-red {
   color: #dc3545;
 }
+
 .color-yellow {
   color: #fcb92c;
 }
+
 .color-blue {
   color: #3b7ddd;
 }
+
 .color-blue {
   color: #3b7ddd;
 }
+
 .color-green {
   color: #1cbb8c;
 }
@@ -23,9 +27,9 @@
   min-height: 100vh;
   min-width: 0;
   overflow: hidden;
-  transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
-  // transition: all 0.2s ease-in-out;
   width: 100%;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 
   .content {
     direction: ltr;
@@ -37,28 +41,47 @@
   }
 }
 
-.sidebar-expanded {
-  .navbar {
-    width: calc(100vw - 250px);
-  }
+.wrapper {
+  &.sidebar-expanded {
+    .sidebar {
+      left: 0;
+      opacity: 1;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+    .navbar {
+      width: calc(100vw - 250px);
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
 
-  .main {
-    width: calc(100vw - 250px) !important;
-    margin-left: 250px;
+    .main {
+      width: calc(100vw - 250px) !important;
+      margin-left: 250px;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
   }
 
   &.sidebar-collapse {
     .sidebar {
-      display: none;
+      left: -100%;
+      opacity: 0;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
     }
 
     .navbar {
       width: 100vw;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
     }
 
     .main {
       width: 100vw !important;
       margin-left: 0;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
     }
   }
 }
