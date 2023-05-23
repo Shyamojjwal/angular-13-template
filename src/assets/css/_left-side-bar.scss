@@ -14,15 +14,17 @@
 
     .sidebar-brand {
       color: #f8f9fa;
-      display: block;
+      display: flex;
       font-size: 1.15rem;
       font-weight: 600;
-      padding: 1.15rem 1.5rem;
+      padding: 1.15rem;
       border-bottom: 1px solid #0c3477;
+      align-items: center;
+      text-decoration: none;
 
       img {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 26px;
+        height: 26px;
         margin-right: 10px;
       }
     }
