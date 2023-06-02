@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { DropDownAnimation } from '@app-core/animations/animation';
 
 @Component({
   selector: 'left-menu-bar',
   templateUrl: './left-menu-bar.component.html',
-  styleUrls: ['./left-menu-bar.component.scss']
+  styleUrls: ['./left-menu-bar.component.scss'],
+  animations: [DropDownAnimation]
 })
 export class LeftMenuBarComponent implements OnInit {
 
@@ -35,6 +37,8 @@ export class LeftMenuBarComponent implements OnInit {
 
     }
   ]
+
+  public isOpen = false;
 
   public openMenuIndex: any = null;
 

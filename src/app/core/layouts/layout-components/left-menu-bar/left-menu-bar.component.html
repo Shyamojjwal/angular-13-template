@@ -19,8 +19,8 @@
           <i class="{{_menu.icon}} align-middle"></i> <span class="align-middle">{{_menu.title}}</span>
         </a>
 
-        <ul class="sidebar-dropdown list-unstyled" [ngClass]="{'expanded': (openMenuIndex == _k), 'collapse': (openMenuIndex != _k)}">
-          <li class="sidebar-item" *ngFor="let _subItem of _menu?.subMenu">
+        <ul class="sidebar-dropdown list-unstyled" *ngIf="openMenuIndex == _k" [@dropDownMenu]>
+          <li class="sidebar-item menu-item" *ngFor="let _subItem of _menu?.subMenu">
             <a class="sidebar-link" [routerLink]="[_subItem.link]" routerLinkActive="active">{{_subItem.title}}</a>
           </li>
         </ul>
