@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard, FeaturedGuard } from '@app-core/guard';
+import { AuthGuard, AuthInverseGuard } from '@app-core/guard';
 import { AuthLayoutComponent, FeaturedLayoutComponent } from '@app-core/layouts/layout-blueprints';
 
 const routes: Routes = [
   {
     path: "auth",
     component: AuthLayoutComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthInverseGuard],
     children: [
       {
         path: "",
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: "",
     component: FeaturedLayoutComponent,
-    canActivate: [FeaturedGuard],
+    canActivate: [AuthGuard],
     children: [
       {
         path: "",

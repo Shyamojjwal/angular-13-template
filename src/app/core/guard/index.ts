@@ -1,2 +1,2 @@
 export * from "./auth.guard";
-export * from "./featured.guard";
+export * from "./auth-inverse.guard";
